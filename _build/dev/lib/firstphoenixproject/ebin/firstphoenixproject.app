@@ -15,6 +15,7 @@
                         'Elixir.FirstphoenixprojectWeb.LayoutView',
                         'Elixir.FirstphoenixprojectWeb.PageController',
                         'Elixir.FirstphoenixprojectWeb.PageView',
+                        'Elixir.FirstphoenixprojectWeb.PlaylistController',
                         'Elixir.FirstphoenixprojectWeb.Router',
                         'Elixir.FirstphoenixprojectWeb.Router.Helpers',
                         'Elixir.FirstphoenixprojectWeb.UserSocket']},
