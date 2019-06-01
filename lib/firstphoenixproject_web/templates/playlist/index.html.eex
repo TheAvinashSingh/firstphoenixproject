@@ -1,3 +1,28 @@
-<h1>PlayList View</h1>
+<h1>Listing Playlists</h1>
 
-<h2>Welcome</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Url</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for playlist <- @playlists do %>
+    <tr>
+      <td><%= playlist.title %></td>
+      <td><%= playlist.url %></td>
+
+      <td>
+        <%= link "Show", to: Routes.playlist_path(@conn, :show, playlist) %>
+        <%= link "Edit", to: Routes.playlist_path(@conn, :edit, playlist) %>
+        <%= link "Delete", to: Routes.playlist_path(@conn, :delete, playlist), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Playlist", to: Routes.playlist_path(@conn, :new) %></span>
